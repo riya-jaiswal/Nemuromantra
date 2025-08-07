@@ -14,10 +14,12 @@ function App() {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
           <div className="flex items-center space-x-3">
-             <img
+            <img
               src={logo}
-              alt="NumeroMantra Logo"className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain"/>
-              <h1 className="text-xl sm:text-2xl font-bold text-[#ED9C49]">Numentra</h1>
+              alt="NumeroMantra Logo"
+              className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain"
+            />
+            <h1 className="text-xl sm:text-2xl font-bold text-[#ED9C49]">NumeroMantra</h1>
           </div>
           <nav className="hidden md:flex space-x-6 text-[#458A95] font-medium text-sm sm:text-base">
             <a href="#home" className="hover:text-[#ED9C49] transition">Home</a>
@@ -38,11 +40,11 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="bg-cover bg-center py-20 text-center text-white"
+        className="bg-cover bg-center py-20 text-center text-white px-4"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <h2 className="text-4xl font-bold mb-4">Decode Your Life's Blueprint</h2>
-        <p className="text-lg max-w-2xl mx-auto mb-6">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Decode Your Life's Blueprint</h2>
+        <p className="text-base sm:text-lg max-w-2xl mx-auto mb-6">
           Empower your journey with expert numerology insights. Align your name, numbers, and energy.
         </p>
         <a
@@ -55,8 +57,8 @@ function App() {
 
       {/* About Section */}
       <section id="about" className="px-4 sm:px-8 py-12 bg-white text-center">
-        <h3 className="text-3xl font-bold text-[#458A95] mb-6">Why Choose NumeroMantra?</h3>
-        <p className="text-gray-700 max-w-3xl mx-auto text-lg">
+        <h3 className="text-2xl sm:text-3xl font-bold text-[#458A95] mb-6">Why Choose NumeroMantra?</h3>
+        <p className="text-gray-700 max-w-3xl mx-auto text-base sm:text-lg">
           We guide individuals through the wisdom of numerology. Whether it’s naming a business,
           harmonizing your house, or identifying favorable dates — we align you with your numbers.
         </p>
@@ -64,7 +66,7 @@ function App() {
 
       {/* Services Section */}
       <section id="services" className="px-4 sm:px-8 py-12">
-        <h3 className="text-3xl font-bold text-center text-[#ED9C49] mb-10">Our Services</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold text-center text-[#ED9C49] mb-10">Our Services</h3>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[{
             img: service1,
@@ -94,7 +96,7 @@ function App() {
             <div key={service.title} className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
               <img src={service.img} alt={service.title} className="w-full h-40 object-cover" />
               <div className="p-5">
-                <h4 className="text-xl font-semibold text-[#ED9C49] mb-2">{service.title}</h4>
+                <h4 className="text-lg sm:text-xl font-semibold text-[#ED9C49] mb-2">{service.title}</h4>
                 <p className="text-sm text-gray-600">{service.desc}</p>
               </div>
             </div>
@@ -104,7 +106,7 @@ function App() {
 
       {/* Blog Section */}
       <section id="blog" className="px-4 sm:px-8 py-12 bg-white">
-        <h3 className="text-3xl font-bold text-center text-[#458A95] mb-8">From Our Blog</h3>
+        <h3 className="text-2xl sm:text-3xl font-bold text-center text-[#458A95] mb-8">From Our Blog</h3>
         <div className="grid gap-6 sm:grid-cols-2">
           {[{
             img: blog1,
@@ -128,14 +130,14 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="px-4 sm:px-8 py-12 text-center bg-[#fff4e6]">
-        <h3 className="text-2xl font-bold text-[#458A95] mb-4">Contact Us</h3>
-        <p className="text-lg mb-2">📞 <a href="tel:6359551151">6359551151</a></p>
-        <p className="text-lg">📧 <a href="mailto:numeromantra1355@gmail.com">numeromantra1355@gmail.com</a></p>
+        <h3 className="text-xl sm:text-2xl font-bold text-[#458A95] mb-4">Contact Us</h3>
+        <p className="text-base sm:text-lg mb-2">📞 <a href="tel:6359551151">6359551151</a></p>
+        <p className="text-base sm:text-lg">📧 <a href="mailto:numeromantra1355@gmail.com">numeromantra1355@gmail.com</a></p>
       </section>
 
       {/* Footer */}
       <footer className="bg-white border-t py-10 text-sm text-gray-600">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             <img src={logo} alt="NumeroMantra Logo" className="h-14 mb-3" />
             <p>Empowering lives through the science of numbers.</p>
@@ -155,7 +157,7 @@ function App() {
             <p>📞 6359551151</p>
             <p>📧 numeromantra1355@gmail.com</p>
           </div>
-          <div className="flex justify-end items-end">
+          <div className="flex justify-start sm:justify-end items-end">
             <a href="https://wa.me/916359551151" target="_blank" rel="noopener noreferrer">
               <img
                 src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
