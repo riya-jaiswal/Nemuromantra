@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/Numero/PNG/Numero 6@4x.png';
-import heroBg from './assets/Numero/PNG/Numero 2@4x.png';
+import logo from './assets/Numero/PNG/Numero 4@4x.png';
+import heroBg from './assets/Hero/1 4x.jpg';
 import service1 from './assets/Numero/JPG/Numero 5@4x-100.jpg';
 import service2 from './assets/Numero/JPG/Numero 2@4x-100.jpg';
 import blog1 from './assets/Numero/JPG/Numero 3@4x-100.jpg';
@@ -17,7 +17,7 @@ function App() {
             <img
               src={logo}
               alt="NumeroMantra Logo"
-              className="h-25 w-auto object-contain"
+              className="h-22 w-auto object-contain"
             />
             <h1 className="text-xl sm:text-2xl font-bold text-[#ED9C49]"></h1>
           </div>
@@ -40,7 +40,7 @@ function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="bg-cover bg-center py-20 text-center text-white px-4"
+        className="bg-cover bg-center py-50 text-center text-white px-4"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">Decode Your Life's Blueprint</h2>
