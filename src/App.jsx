@@ -17,9 +17,9 @@ function App() {
             <img
               src={logo}
               alt="NumeroMantra Logo"
-              className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 object-contain"
+              className="h-25 w-auto object-contain"
             />
-            <h1 className="text-xl sm:text-2xl font-bold text-[#ED9C49]">NumeroMantra</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-[#ED9C49]"></h1>
           </div>
           <nav className="hidden md:flex space-x-6 text-[#458A95] font-medium text-sm sm:text-base">
             <a href="#home" className="hover:text-[#ED9C49] transition">Home</a>
