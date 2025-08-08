@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+.gradient-button{
+    @apply bg-gradient-to-r from-[#ED9C49] to-[#458A95]
+}
