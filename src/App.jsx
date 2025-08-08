@@ -426,7 +426,7 @@ function App() {
                     'Number Compatibility',
                     'Energy Assessment',
                     'Lucky Alternatives',
-                    'Correction Suggestions'
+                    ' Analysis & Correction Suggestions'
                   ]
                 },
                 {
@@ -457,7 +457,7 @@ function App() {
                   img: service2,
                   title: 'Gemstone & Yantra',
                   desc: 'Get personalized gemstone and yantra recommendations for amplified energy.',
-                  price: '₹1299',
+                  price: '₹14,999',
                   features: [
                     'Gemstone Selection',
                     'Yantra Guidance',
