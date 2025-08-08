@@ -814,15 +814,15 @@ function App() {
               <h4 className="font-bold text-[#ED9C49] mb-6 text-lg flex items-center space-x-2">
                 <span>Connect With Us</span>
               </h4>
-              <div className="space-y-4 mb-6">
-                <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
+              <div className="space-y-3 mb-6">
+                <a href='tel:6359551151' className="inline-flex group  items-center cursor-pointer space-x-3 text-gray-300 text-sm sm:text-base">
                   <span className="text-green-400">Phone:</span>
-                  <span>+91 6359551151</span>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300 text-sm">
+                  <span   className='group-hover:underline '>+91 6359551151</span>
+                </a>
+                <a href='mailto:numeromantra1355@gmail.com' className="inline-flex group items-start space-x-3 text-gray-300 text-sm">
                   <span className="text-blue-400">Email:</span>
-                  <span className="break-all">numeromantra1355@gmail.com</span>
-                </div>
+                  <span className="break-all group-hover:underline">numeromantra1355@gmail.com</span>
+                </a>
                 <div className="flex items-center space-x-3 text-gray-300 text-sm sm:text-base">
                   <span className="text-purple-400">Hours:</span>
                   <span>24/7 Available</span>
