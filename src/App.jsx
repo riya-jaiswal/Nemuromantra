@@ -374,7 +374,7 @@ function App() {
                   img: service1,
                   title: 'Birth Date Numerology',
                   desc: 'Discover your Life Path, Destiny, and Soul Urge numbers. Understand your true purpose.',
-                  price: '₹13,999',
+                  price: '₹1,355',
                   features: [
                     'Life Path Analysis',
                     'Personality Traits',
