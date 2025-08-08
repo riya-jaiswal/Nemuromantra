@@ -12,7 +12,6 @@ function App() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Intersection Observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -34,7 +33,6 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  // Testimonial carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
@@ -75,14 +73,12 @@ function App() {
     { number: "9", meaning: "Universal Love & Service", color: "text-teal-500" }
   ];
 
-  // Close mobile menu when clicking on a link
   const handleMobileMenuClick = () => {
     setIsMobileMenuOpen(false);
   };
 
   return (
     <div className="bg-gradient-to-b from-[#fff4e6] to-[#f0e6ff] min-h-screen text-gray-800 font-sans overflow-x-hidden">
-      {/* Mystical Background Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <div className="mystical-bg">
           <div className="floating-number">1</div>
@@ -94,11 +90,9 @@ function App() {
         </div>
       </div>
 
-      {/* Enhanced Sticky Navbar */}
-      <header className="bg-white/95 backdrop-blur-md shadow-xl   fixed top-0 left-0 right-0 z-50 border-b border-purple-200">
+      <header className="bg-white/95 backdrop-blur-md shadow-xl fixed top-0 left-0 right-0 z-50 border-b border-purple-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-0 ">
           <div className="flex justify-between items-center  sm:py-4">
-            {/* Logo Section */}
             <div className="flex items-center space-x-2 sm:space-x-3 animate-fadeInLeft">
               <div className="relative">
                 <img
@@ -116,7 +110,6 @@ function App() {
               </div>
             </div>
 
-            {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-6 xl:space-x-8 text-[#458A95] font-semibold">
               {[
                 { name: 'Home' },
@@ -137,19 +130,16 @@ function App() {
               ))}
             </nav>
 
-            {/* Desktop CTA Button & Mobile Menu Toggle */}
             <div className="flex items-center space-x-3 ">
               <a
                 href="tel:6359551151"
                 className="hidden sm:flex gradient-button text-white px-3 sm:px-6 py-2 sm:py-3 rounded-full hover:shadow-2xl transform hover:scale-105 transition-all duration-300 animate-shimmer text-sm sm:text-base font-semibold"
               >
                 <button className=" flex items-center space-x-1 sm:space-x-2">
-                  {/* <span className="hidden xs:inline">Get</span> */}
                   <span>Contact Us</span>
                 </button>
               </a>
 
-              {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
@@ -161,10 +151,8 @@ function App() {
             </div>
           </div>
 
-          {/* Mobile Navigation Menu */}
-          <div className={`lg:hidden pb-2 transition-all duration-300  ease-in-out ${isMobileMenuOpen ? 'max-h-86 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
+          <div className={`lg:hidden pb-2 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-86 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
             <nav className="py-4 border-t border-purple-200">
-              {/* Navigation Links */}
               {[
                 { name: 'Home' },
                 { name: 'About' },
@@ -183,8 +171,7 @@ function App() {
                 </a>
               ))}
 
-              {/* Mobile CTA Button - Below Navigation Links */}
-              <div className="px-4 pt-4  ">
+              <div className="px-4 pt-4">
                 <a
                   href="tel:6359551151"
                   onClick={handleMobileMenuClick}
@@ -198,10 +185,7 @@ function App() {
         </div>
       </header>
 
-      {/* Add padding-top to body content to account for fixed header */}
       <div className="pt-20 sm:pt-24">
-
-        {/* Enhanced Hero Section */}
         <section
           id="home"
           className="relative bg-cover bg-center py-24 sm:py-32 md:py-40 lg:py-48 text-center text-white px-4 overflow-hidden"
@@ -209,7 +193,6 @@ function App() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-purple-900/70 to-black/60"></div>
 
-          {/* Mystical Particles */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <div
@@ -252,7 +235,6 @@ function App() {
                     <span>Free Numerology Reading</span>
                   </span>
                 </a>
-
                 <a
                   href="tel:6359551151"
                   className="group bg-white/20 backdrop-blur-md text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:bg-white/30 transition-all duration-300 font-semibold border border-white/30 w-full sm:w-auto text-center"
@@ -263,7 +245,6 @@ function App() {
                 </a>
               </div>
 
-              {/* Trust Indicators */}
               <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm opacity-80 px-2">
                 <span className="flex items-center space-x-2">
                   <span>★</span>
@@ -282,7 +263,6 @@ function App() {
           </div>
         </section>
 
-        {/* Numerology Numbers Section */}
         <section className="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-12 sm:mb-16 bg-gradient-to-r from-[#458A95] to-[#ED9C49] bg-clip-text text-transparent px-2">
@@ -306,7 +286,6 @@ function App() {
           </div>
         </section>
 
-        {/* Enhanced About Section */}
         <section
           id="about"
           className="px-4 sm:px-8 py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-purple-50 to-pink-50 relative"
@@ -327,7 +306,6 @@ function App() {
               </p>
             </div>
 
-            {/* Enhanced Stats with animations */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
               {[
                 { number: '10,000+', label: 'Life Readings', color: 'from-purple-500 to-pink-500' },
@@ -348,7 +326,6 @@ function App() {
               ))}
             </div>
 
-            {/* Special Features */}
             <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
@@ -379,7 +356,7 @@ function App() {
           </div>
         </section>
 
-        {/* Enhanced Services Section */}
+        {/* SERVICES: fixed alignment */}
         <section id="services" className="px-4 sm:px-8 py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-purple-50 relative" data-animate>
           <div className={`transition-all duration-1000 ${isVisible.services ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'}`}>
             <div className="text-center mb-16 sm:mb-20">
@@ -419,14 +396,14 @@ function App() {
                 },
                 {
                   img: service1,
-                  title: 'Mobile Number Analysis',
+                  title: 'Mobile Number Analysis & Correction Suggestions',
                   desc: 'Ensure your phone number aligns with your cosmic energy and life goals.',
                   price: '₹799',
                   features: [
                     'Number Compatibility',
                     'Energy Assessment',
                     'Lucky Alternatives',
-                    ' Analysis & Correction Suggestions'
+                    'Correction Suggestions'
                   ]
                 },
                 {
@@ -445,7 +422,7 @@ function App() {
                   img: service1,
                   title: 'Relationship Compatibility',
                   desc: 'Analyze number compatibility between partners for lasting relationships.',
-                  price: '₹5999',
+                  price: '₹5,999',
                   features: [
                     'Partner Matching',
                     'Relationship Advice',
@@ -465,51 +442,60 @@ function App() {
                     'Energizing Rituals'
                   ]
                 }
-              ]
-                .map((service, index) => (
-                  <div
-                    key={service.title}
-                    className="service-card-enhanced group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={service.img}
-                        alt={service.title}
-                        className="w-full h-48 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-110"
-                      />
-                      <div className="absolute top-4 left-4 bg-[#ED9C49] text-white px-3 py-1 rounded-full font-bold text-sm">
-                        {service.price}
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              ].map((service, index) => (
+                <div
+                  key={service.title}
+                  className="service-card-enhanced group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full flex flex-col"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="w-full h-48 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4 bg-[#ED9C49] text-white px-3 py-1 rounded-full font-bold text-sm">
+                      {service.price}
                     </div>
-
-                    <div className="p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-bold text-[#ED9C49] mb-3 group-hover:text-[#458A95] transition-colors">
-                        {service.title}
-                      </h4>
-                      <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">{service.desc}</p>
-
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                            <span className="text-green-500">✓</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <a href="tel:6359551151" className="w-full inline-block text-center gradient-button cursor-pointer text-white py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold">
-                        Book Now
-                      </a>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                ))}
+
+                  {/* Body with flex-grow and bottom-pinned button */}
+                  <div className="p-4 sm:p-6 flex flex-col flex-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-[#ED9C49] mb-3 group-hover:text-[#458A95] transition-colors">
+                      {service.title}
+                    </h4>
+
+                    {/* Stabilize text & list heights for alignment */}
+                    <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base min-h-[56px] sm:min-h-[48px]">
+                      {service.desc}
+                    </p>
+
+                    <ul className="space-y-2 mb-6 text-sm sm:text-base text-gray-600 min-h-[112px] sm:min-h-[104px]">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center space-x-2">
+                          <span className="text-green-500">✓</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Spacer to push button to bottom if needed */}
+                    <div className="mt-auto" />
+
+                    <a
+                      href="tel:6359551151"
+                      className="w-full inline-block text-center gradient-button cursor-pointer text-white py-3 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 font-semibold"
+                    >
+                      Book Now
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
         <section className="py-16 sm:py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
@@ -532,8 +518,7 @@ function App() {
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-white scale-125' : 'bg-white/50'
-                    }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-white scale-125' : 'bg-white/50'}`}
                   onClick={() => setCurrentTestimonial(index)}
                 />
               ))}
@@ -541,7 +526,6 @@ function App() {
           </div>
         </section>
 
-        {/* Enhanced Blog Section */}
         <section id="blog" className="px-4 sm:px-8 py-16 sm:py-20 lg:py-24 bg-white" data-animate>
           <div className={`transition-all duration-1000 ${isVisible.blog ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'}`}>
             <div className="text-center mb-16 sm:mb-20">
@@ -615,10 +599,6 @@ function App() {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      {/* <div className="flex items-center text-[#458A95] font-bold group-hover:text-[#ED9C49] transition-colors">
-                        <span>Read Full Article</span>
-                        <span className="ml-2 transform group-hover:translate-x-2 transition-transform text-xl">→</span>
-                      </div> */}
                       <div className="flex items-center space-x-4 text-gray-400">
                         <span className="flex items-center space-x-1">
                           <span>👁</span>
@@ -634,20 +614,12 @@ function App() {
                 </div>
               ))}
             </div>
-{/* 
-            <div className="text-center mt-12">
-              <a href="#blog" className="gradient-button text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold">
-                Explore All Articles
-              </a>
-            </div> */}
           </div>
         </section>
 
-        {/* Enhanced Contact Section */}
         <section id="contact" className="px-4 sm:px-8 py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 text-white relative overflow-hidden" data-animate>
           <div className="absolute inset-0 bg-black/30"></div>
 
-          {/* Mystical background effects */}
           <div className="absolute inset-0">
             {[...Array(15)].map((_, i) => (
               <div
@@ -722,7 +694,6 @@ function App() {
               ))}
             </div>
 
-            {/* Special Offer */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto border border-white/20">
               <h4 className="text-xl sm:text-2xl font-bold mb-4 text-yellow-300">Limited Time Offer</h4>
               <p className="text-base sm:text-lg mb-6 px-2">Get your first numerology reading absolutely FREE! Discover your Life Path number and unlock your destiny.</p>
@@ -736,7 +707,6 @@ function App() {
           </div>
         </section>
 
-        {/* Enhanced Footer */}
         <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16 sm:py-20 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="grid grid-cols-8 gap-4 h-full">
@@ -817,7 +787,7 @@ function App() {
               <div className="space-y-3 mb-6">
                 <a href='tel:6359551151' className="inline-flex group  items-center cursor-pointer space-x-3 text-gray-300 text-sm sm:text-base">
                   <span className="text-green-400">Phone:</span>
-                  <span   className='group-hover:underline '>+91 6359551151</span>
+                  <span className='group-hover:underline '>+91 6359551151</span>
                 </a>
                 <a href='mailto:numeromantra1355@gmail.com' className="inline-flex group items-start space-x-3 text-gray-300 text-sm">
                   <span className="text-blue-400">Email:</span>
