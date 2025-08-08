@@ -374,7 +374,7 @@ function App() {
                   img: service1,
                   title: 'Birth Date Numerology',
                   desc: 'Discover your Life Path, Destiny, and Soul Urge numbers. Understand your true purpose.',
-                  price: '₹999',
+                  price: '₹13,999',
                   features: [
                     'Life Path Analysis',
                     'Personality Traits',
@@ -396,9 +396,9 @@ function App() {
                 },
                 {
                   img: service1,
-                  title: 'Mobile Number Analysis & Correction Suggestions',
+                  title: 'Mobile Number Analysis & Correction/Suggestions',
                   desc: 'Ensure your phone number aligns with your cosmic energy and life goals.',
-                  price: '₹799',
+                  price: '₹14,999',
                   features: [
                     'Number Compatibility',
                     'Energy Assessment',
@@ -454,7 +454,7 @@ function App() {
                       alt={service.title}
                       className="w-full h-48 sm:h-52 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute top-4 left-4 bg-[#ED9C49] text-white px-3 py-1 rounded-full font-bold text-sm">
+                    <div className="absolute top-4 left-4 gradient-button text-white px-3 py-1 rounded-full font-bold text-sm">
                       {service.price}
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -568,7 +568,7 @@ function App() {
                       alt={blog.title}
                       className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute top-4 left-4 bg-[#ED9C49] text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-sm font-bold">
+                    <div className="absolute top-4 left-4 gradient-button text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-sm font-bold">
                       {blog.category}
                     </div>
                     <div className="absolute bottom-4 right-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
